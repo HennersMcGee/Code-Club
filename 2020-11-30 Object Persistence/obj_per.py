@@ -34,6 +34,19 @@ with open('store_dict.pkl', 'wb') as output_:
 with open('store_dict.pkl', 'rb') as input_:
     test_dict2 = pickle.load(input_)
 
+#%% Enviroment variable
+# Print enviroment variable
+print(os.environ)
+
+# Add temporary variable
+os.environ['Temp_Var'] = 'jiffy'
+
+# Retrieve variable value
+os.environ.get('Temp_Var')
+
+# Delete variable
+os.environ.pop('Temp_Var')
+
 #%% Store as csv
 import pandas as pd
 
